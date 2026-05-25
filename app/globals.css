@@ -1,0 +1,245 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --mainColor: #ffbaba;
+  --mainColorEvent: #ff6262;
+  --subColor: #efefef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+header {
+  width: 70%;
+  min-width: 390px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-area {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+/* 유저 프로필, 팝오버, 로그인 로그아웃 등 */
+.userInfoContent {
+  width: 320px;
+  height: 325px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(100% + 30px);
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onPopover {
+  transition: all 0.15s ease-out;
+  margin-top: calc(100%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.userProfile {
+  width: 100%;
+  flex: 1;
+  background-color: white;
+  padding: 18px 20px;
+}
+
+.userInfoContent .Link {
+  outline: none;
+  border: none;
+  text-align: start;
+  padding: 18px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border-top: 1px solid var(--subColor);
+}
+
+.userInfoContent .Link:hover {
+  background-color: var(--mainColor);
+  color: white;
+  transition: all 0.15s ease-out;
+}
+
+/* 로그인 페이지의 로그인 버튼 */
+.loginBtn {
+  color: white;
+  padding: 8px 16px;
+  align-self: flex-start;
+  margin: auto;
+}
+
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setBoard {
+  width: 45%;
+  min-width: 390px;
+  height: 60%;
+}
+
+.textStyleCase,
+.btnCase {
+  display: flex;
+  flex-direction: column;
+}
+
+.textStyleCase {
+  width: 100%;
+  height: 11.5%;
+  margin-bottom: 3.5%;
+}
+
+.textStyleCase input {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* text box류 테두리, 호버했을 때, 눌렀을 때 */
+.hoverFocus {
+  box-shadow: inset 0 0 0 1px var(--subColor);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.hoverFocus:hover {
+  box-shadow: inset 0 0 0 1px var(--mainColor);
+  transition: all 0.3s ease;
+}
+
+.hoverFocus:focus {
+  box-shadow: inset 0 0 0 2px var(--mainColor);
+}
+
+.coinCase {
+  width: 100%;
+  height: 11.5%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5%;
+}
+
+.btnCase {
+  width: 30%;
+}
+
+.labelCase {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.labelCase input {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.labelCase input:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+
+.labelCase input:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.labelCase input:hover {
+  box-shadow: inset 0 0 0 2px var(--mainColor);
+}
+
+.posRel {
+  position: relative;
+}
+
+.selected {
+  color: white;
+  background-color: var(--mainColor);
+}
+
+.unselected {
+  color: black;
+  background-color: var(--subColor);
+}
+
+/* 메인 컬러 input, submit 류 */
+.submitBtn {
+  display: block;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* mainColorHover - 메인 컬러 호버 */
+.mainColorHover {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--mainColor);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mainColorHover:hover {
+  background-color: var(--mainColorEvent);
+  color: white;
+  transition: 0.15s ease-out;
+}
+
+.textArea {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 3.5%;
+}
+
+#excuse {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0 0 10px;
+  resize: vertical;
+  border: 2px solid transparent;
+}
